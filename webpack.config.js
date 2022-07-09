@@ -1,5 +1,6 @@
 /* eslint-disable */
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: ['babel-polyfill', './index.ts'],
@@ -11,6 +12,9 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.json'],
     },
+    plugins: [
+        new Dotenv()
+    ],
     module: {
         rules: [
             {
